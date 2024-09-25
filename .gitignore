@@ -1,0 +1,28 @@
+# Ignore build artifacts
+./.zig-out/
+.zig-cache/
+
+# Ignore editor-specific files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore Windows-specific files
+Thumbs.db
+
+# Ignore other temporary files
+*.log
+*.out
+*.err
+
+# Ignore dependency manager files
+.zig/
