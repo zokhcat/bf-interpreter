@@ -1,6 +1,7 @@
 # Ignore build artifacts
 ./.zig-out/
 .zig-cache/
+zig-out/
 
 # Ignore editor-specific files
 *.swp
