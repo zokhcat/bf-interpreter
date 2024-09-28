@@ -52,20 +52,16 @@ fn interpret(code: []const u8, allocator: std.mem.Allocator) !void {
                     }
                 }
             },
+            '.' => {
+                try std.io.getStdOut().writer().writeByte(memory[data_pointer]);
+            },
             else => {},
         }
     }
-
-    std.debug.print("Final memory state: ", .{});
-    for (memory[0..10]) |value| {
-        std.debug.print("{d} ", .{value});
-    }
-    std.debug.print("\n", .{});
 }
 
 pub fn main() !void {
     const input = "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.";
-    std.debug.print("{s}\n", .{input});
 
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     defer _ = gpa.deinit();
